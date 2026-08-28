@@ -1,0 +1,12 @@
+# AccessGuard — robots.txt
+# Allow all well-behaved crawlers to index the full site.
+
+User-agent: *
+Allow: /
+
+# Block crawlers from hitting the API directly
+Disallow: /api/
+Disallow: /api/*
+
+# Sitemap location
+Sitemap: https://accessguard.io/sitemap.xml

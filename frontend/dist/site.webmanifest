@@ -1,0 +1,19 @@
+{
+  "name": "AccessGuard",
+  "short_name": "AccessGuard",
+  "description": "Third-party access risk intelligence platform for small organizations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FB",
+  "theme_color": "#1E40AF",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["security", "business", "productivity"]
+}
