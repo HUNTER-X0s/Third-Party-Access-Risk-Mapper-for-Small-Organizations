@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <!-- Animated Banner -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=220&section=header&text=AccessGuard&fontSize=72&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Third-Party%20Access%20Risk%20Intelligence%20Platform&descAlignY=58&descSize=20" width="100%" />
@@ -114,14 +114,14 @@
 ## ⚙️ How AccessGuard Works in 3 Steps
 
 ```
-┌─────────────────────────┐     ┌─────────────────────────┐     ┌─────────────────────────┐
-│   1. INGEST & MAP       │     │   2. SCORE & DETECT     │     │  3. VISUALIZE & ACT     │
-│                         │     │                         │     │                         │
-│ • Read-Only Connectors  │ ──► │ • Deterministic Engine  │ ──► │ • Interactive Attack    │
-│ • Normalized OAuth Scopes│     │ • Blast Radius Scoring  │     │   Graph & Delta Map     │
-│ • Shadow SaaS Discovery │     │ • Excess Scope Detection│     │ • 1-Click Simulation    │
-│ • SHA-256 Provenance    │     │ • Continuous Monitoring │     │ • Executive PDF Reports │
-└─────────────────────────┘     └─────────────────────────┘     └─────────────────────────┘
+┌────────────────────────────┐     ┌────────────────────────────┐     ┌────────────────────────────┐
+│   1. INGEST & MAP          │     │   2. SCORE & DETECT        │     │  3. VISUALIZE & ACT        │
+│                            │     │                            │     │                            │
+│ • Read-Only Connectors     │     │ • Deterministic Engine     │     │ • Interactive Attack       │
+│ • Normalized OAuth Scopes  │     │ • Blast Radius Scoring     │     │   Graph & Delta Map        │
+│ • Shadow SaaS Discovery    │     │ • Excess Scope Detection   │     │ • 1-Click Simulation       │
+│ • SHA-256 Provenance       │     │ • Continuous Monitoring    │     │ • Executive PDF Reports    │
+└────────────────────────────┘     └────────────────────────────┘     └────────────────────────────┘
 ```
 
 ---
@@ -252,35 +252,35 @@ AccessGuard is structured for **optimal search indexing** and **rich social prev
 ## 🏗️ System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    FRONTEND                                   │
+┌──────────────────────────────────────────────────────────────┐
+│                    FRONTEND                                  │
 │          React 18 + TypeScript + Vite + TailwindCSS          │
 │   • AccessGuard SecOps Design System                         │
 │   • Lazy-loaded page chunks (fast initial load)              │
 │   • All data from authenticated REST API only                │
-└───────────────────────┬─────────────────────────────────────┘
+└───────────────────────┬──────────────────────────────────────┘
                         │  HTTPS + HttpOnly JWT Cookie
-┌───────────────────────▼─────────────────────────────────────┐
-│                  FASTAPI BACKEND                              │
+┌───────────────────────▼──────────────────────────────────────┐
+│                  FASTAPI BACKEND                             │
 │   • RS256/HS256 JWT authentication                           │
 │   • CSRF double-defense (SameSite + X-Requested-With)        │
 │   • Pydantic input validation & sanitization                 │
-│   • Rate limiting & login throttling (5 attempts → 15min)   │
-└──────────┬────────────────────────────────┬─────────────────┘
-           │                                │
-┌──────────▼──────────┐        ┌────────────▼──────────────┐
-│   RISK ENGINE        │        │   AI ADVISORY LAYER        │
-│   Deterministic v1.5 │        │   Google Gemini (isolated) │
-│   No AI influence    │        │   Sandboxed, read-only     │
-│   SHA-256 evidence   │        │   Labels all AI output     │
-└──────────┬──────────┘        └────────────▲──────────────┘
+│   • Rate limiting & login throttling (5 attempts → 15min)    │
+└──────────┬─────────────────────────────────┬─────────────────┘
+           │                                 │
+┌──────────▼───────────┐        ┌────────────▼────────────────┐
+│   RISK ENGINE        │        │   AI ADVISORY LAYER         │
+│   Deterministic v1.5 │        │   Google Gemini (isolated)  │
+│   No AI influence    │        │   Sandboxed, read-only      │
+│   SHA-256 evidence   │        │   Labels all AI output      │
+└──────────┬───────────┘        └─────────────▲───────────────┘
            │                                
-┌──────────▼──────────────────────────────────────────────────┐
-│                  DATABASE (SQLite → PostgreSQL)               │
+┌──────────▼───────────────────────────────────────────────────┐
+│                  DATABASE (SQLite → PostgreSQL)              │
 │   • Organization-scoped tenant isolation on every query      │
 │   • Append-only evidence & audit log tables                  │
 │   • Encrypted sensitive fields                               │
-└─────────────────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
