@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <!-- Animated Banner -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=220&section=header&text=AccessGuard&fontSize=72&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Third-Party%20Access%20Risk%20Intelligence%20Platform&descAlignY=58&descSize=20" width="100%" />
@@ -183,33 +183,33 @@ Visualizes the complete access topology as an interactive graph:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    FRONTEND                                   │
-│          React 18 + TypeScript + Vite + TailwindCSS          │
-│   • AccessGuard SecOps Design System                         │
-│   • Lazy-loaded page chunks (fast initial load)              │
-│   • All data from authenticated REST API only                │
+│                    FRONTEND                                 │
+│          React 18 + TypeScript + Vite + TailwindCSS         │
+│   • AccessGuard SecOps Design System                        │
+│   • Lazy-loaded page chunks (fast initial load)             │
+│   • All data from authenticated REST API only               │
 └───────────────────────┬─────────────────────────────────────┘
                         │  HTTPS + HttpOnly JWT Cookie
 ┌───────────────────────▼─────────────────────────────────────┐
-│                  FASTAPI BACKEND                              │
-│   • RS256/HS256 JWT authentication                           │
-│   • CSRF double-defense (SameSite + X-Requested-With)        │
-│   • Pydantic input validation & sanitization                 │
+│                  FASTAPI BACKEND                            │
+│   • RS256/HS256 JWT authentication                          │
+│   • CSRF double-defense (SameSite + X-Requested-With)       │
+│   • Pydantic input validation & sanitization                │
 │   • Rate limiting & login throttling (5 attempts → 15min)   │
 └──────────┬────────────────────────────────┬─────────────────┘
            │                                │
-┌──────────▼──────────┐        ┌────────────▼──────────────┐
-│   RISK ENGINE        │        │   AI ADVISORY LAYER        │
-│   Deterministic v1.5 │        │   Google Gemini (isolated) │
-│   No AI influence    │        │   Sandboxed, read-only     │
-│   SHA-256 evidence   │        │   Labels all AI output     │
-└──────────┬──────────┘        └────────────▬──────────────┘
+┌──────────▼──────────┐        ┌────────────▼────────────────┐
+│   RISK ENGINE       │        │   AI ADVISORY LAYER         │
+│   Deterministic     │        │   Google Gemini (isolated)  │
+│   No AI influence   │        │   Sandboxed, read-only      │
+│   SHA-256 evidence  │        │   Labels all AI output      │
+└──────────┬──────────┘        └────────────▬────────────────┘
            │                                
 ┌──────────▼──────────────────────────────────────────────────┐
-│                  DATABASE (SQLite → PostgreSQL)               │
-│   • Organization-scoped tenant isolation on every query      │
-│   • Append-only evidence & audit log tables                  │
-│   • Encrypted sensitive fields                               │
+│                  DATABASE (SQLite → PostgreSQL)             │
+│   • Organization-scoped tenant isolation on every query     │
+│   • Append-only evidence & audit log tables                 │
+│   • Encrypted sensitive fields                              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
